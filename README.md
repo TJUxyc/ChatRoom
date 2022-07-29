@@ -16,6 +16,7 @@
 格式: {**COMMAND**}**#**{**DATA**}
 * COMMAND: 通信指令
 * DATA: 消息正文
+
 | COMMAND   | DATA                       | Describe         |
 |-----------|----------------------------|------------------|
 | Login     | User name                  | 登陆系统|
@@ -38,17 +39,18 @@
 2. 群聊用例
 输入用户名--->连接到聊天系统--->查看当前群组列表--->创建某个群组（加入某个群组）--->输入群组名称--->输入群聊信息--->发送群聊信息--->退出群组--->退出系统
 3. 用户指令设计
-| #To(Fist line) | Second line name  | Second line content |
-|----------------|-------------------|---------------------|
-| %{User name}   | #Content          | Message content     |
-| ${Group name}  | #Content          | Message content     |
-| user list      | /                 |                     |
-| group list     | /                 |                     |
-| create group   | #Group name       | group name          |
-| join group     | #Group name       | group name          |
-| exit group     | #Group name       | group name          |
-| quit           | /                 |                     |
-| else           | (Invalid command) |                     |
+
+| #To(Fist line) | Second line name  | Second line content | Desribe |
+|----------------|-------------------|---------------------|---------|
+| %{User name}   | #Content          | Message content     | 私聊 |
+| ${Group name}  | #Content          | Message content     | 群聊 |
+| user list      | /                 |                     | 获取用户列表|
+| group list     | /                 |                     | 获取群组列表|
+| create group   | #Group name       | group name          | 创建群组 |
+| join group     | #Group name       | group name          | 加入群组 |
+| exit group     | #Group name       | group name          | 退出群组 |
+| quit           | /                 |                     | 退出系统 |
+| else           | (Invalid command) |                     | 非法指令 |
 #### 待完善之处
 * 服务器ip地址硬编码到了代码中，可以把ip放到可执行文件的命令行参数里面。
 * 系统中以user name为唯一标识，但是人名可能出现重复的情况，此时前面的用户会被覆盖。
