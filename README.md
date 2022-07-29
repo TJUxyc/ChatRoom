@@ -40,7 +40,7 @@
 输入用户名--->连接到聊天系统--->查看当前群组列表--->创建某个群组（加入某个群组）--->输入群组名称--->输入群聊信息--->发送群聊信息--->退出群组--->退出系统
 3. 用户指令设计
 
-| #To(Fist line) | Second line name  | Second line content | Desribe |
+| #To(First line)| Second line name  | Second line content | Desribe |
 |----------------|-------------------|---------------------|---------|
 | %{User name}   | #Content          | Message content     | 私聊 |
 | ${Group name}  | #Content          | Message content     | 群聊 |
