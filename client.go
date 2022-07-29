@@ -14,8 +14,8 @@ var (
 )
 
 func main() {
-	// 输入当前电脑的ip，如果只是想本地运行，不经过局域网可以直接输入127.0.0.1
-	conn, err := net.Dial("tcp", "192.168.9.88:50000")
+	// 监听用本机的50000端口
+	conn, err := net.Dial("tcp", "0.0.0.0:50000")
 	if err != nil {
 		fmt.Println("Cannot connect to the server", err.Error())
 		return
