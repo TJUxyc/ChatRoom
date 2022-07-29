@@ -24,8 +24,8 @@ var (
 
 func main() {
 	fmt.Println("Starting the server ...")
-	// 创建监听器
-	listener, err := net.Listen("tcp", "192.168.9.88:50000")
+	// 创建监听器，这里要改成局域网下服务器（即运行server.go的主机）的ip地址
+	listener, err := net.Listen("tcp", "xxx.xxx.xxx.xxx:50000")
 	if err != nil {
 		fmt.Println("Error listening", err.Error())
 		return
