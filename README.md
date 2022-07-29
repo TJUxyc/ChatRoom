@@ -11,7 +11,7 @@
 * listner.Accept()
 * conn.Write()
 * conn.Read()
-#### TCP层通信协议设计
+#### 通信协议设计
 1. **请求报文**
 格式: {**COMMAND**}**#**{**DATA**}
 * COMMAND: 通信指令
